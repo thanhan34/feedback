@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hệ thống đánh giá giảng viên
 
-## Getting Started
+Hệ thống thu thập đánh giá giảng viên sau mỗi buổi học, được xây dựng bằng Next.js, TypeScript, Tailwind CSS và Firebase.
 
-First, run the development server:
+## Tính năng
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Trang đánh giá dành cho học viên**:
+  - Chọn giảng viên và khóa học
+  - Đánh giá chuyên môn giảng viên (thang điểm 1-5)
+  - Đánh giá phương pháp giảng dạy
+  - Đánh giá giao tiếp & tương tác
+  - Đánh giá kết quả học tập
+  - Phản hồi tự do
+  - Tùy chọn ẩn danh
+
+- **Trang quản trị**:
+  - Quản lý danh sách giảng viên (thêm/sửa/xóa)
+  - Quản lý danh sách khóa học (thêm/sửa/xóa)
+  - Xem và lọc đánh giá từ học viên
+
+## Công nghệ sử dụng
+
+- **Frontend**: Next.js, TypeScript, Tailwind CSS
+- **Backend**: Firebase Firestore
+- **Hosting**: Vercel (khuyến nghị)
+
+## Cài đặt và chạy
+
+1. Clone repository:
+   ```bash
+   git clone <repository-url>
+   cd feedback
+   ```
+
+2. Cài đặt dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Tạo một dự án Firebase và cập nhật thông tin cấu hình trong `app/firebase/config.ts`.
+
+4. Khởi tạo dữ liệu mẫu:
+   - Truy cập `/api/init?key=initialize-database-secret` để khởi tạo dữ liệu mẫu (giảng viên và khóa học).
+
+5. Chạy ứng dụng ở môi trường phát triển:
+   ```bash
+   npm run dev
+   ```
+
+6. Truy cập ứng dụng:
+   - Trang đánh giá: [http://localhost:3000](http://localhost:3000)
+   - Trang quản trị: [http://localhost:3000/admin-secret](http://localhost:3000/admin-secret)
+
+## Cấu trúc dự án
+
+```
+feedback/
+├── app/
+│   ├── admin-secret/       # Trang quản trị
+│   ├── api/                # API routes
+│   ├── components/         # React components
+│   │   ├── admin/          # Components cho trang quản trị
+│   │   ├── common/         # Components dùng chung
+│   │   └── feedback/       # Components cho form đánh giá
+│   ├── firebase/           # Cấu hình và services Firebase
+│   ├── types/              # TypeScript type definitions
+│   └── utils/              # Utility functions
+├── public/                 # Static assets
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Màu sắc
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Hệ thống sử dụng bảng màu sau:
+- **#ffffff** (Trắng)
+- **#fc5d01** (Cam đậm)
+- **#fedac2** (Cam nhạt rất nhẹ)
+- **#fdbc94** (Cam nhạt trung bình)
+- **#ffac7b** (Cam sáng hơn)
+- **#fd7f33** (Cam rực)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Triển khai
 
-## Learn More
+Khuyến nghị triển khai ứng dụng lên Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+1. Đẩy code lên GitHub
+2. Kết nối repository với Vercel
+3. Cấu hình các biến môi trường cần thiết
+4. Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Bảo mật
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Trang quản trị được bảo vệ bằng URL bí mật (`/admin-secret`)
+- API khởi tạo dữ liệu được bảo vệ bằng khóa bí mật
+- Trong môi trường production, nên bổ sung thêm các biện pháp bảo mật như Firebase Authentication
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
