@@ -28,7 +28,7 @@ const LearningOutcomesSection: React.FC<LearningOutcomesSectionProps> = ({
 }) => {
   const [progressFeltReason, setProgressFeltReason] = useState('');
   const [achievedGoalsReason, setAchievedGoalsReason] = useState('');
-  const [reasonErrors, setReasonErrors] = useState({
+  const [reasonErrors] = useState({
     progressFelt: '',
     achievedGoals: ''
   });

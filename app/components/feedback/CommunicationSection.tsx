@@ -28,7 +28,7 @@ const CommunicationSection: React.FC<CommunicationSectionProps> = ({
 }) => {
   const [friendlyAttitudeReason, setFriendlyAttitudeReason] = useState('');
   const [listeningSkillsReason, setListeningSkillsReason] = useState('');
-  const [reasonErrors, setReasonErrors] = useState({
+  const [reasonErrors] = useState({
     friendlyAttitude: '',
     listeningSkills: ''
   });

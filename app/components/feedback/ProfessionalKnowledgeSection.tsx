@@ -28,26 +28,10 @@ const ProfessionalKnowledgeSection: React.FC<ProfessionalKnowledgeSectionProps> 
 }) => {
   const [clearExplanationsReason, setClearExplanationsReason] = useState('');
   const [upToDateKnowledgeReason, setUpToDateKnowledgeReason] = useState('');
-  const [reasonErrors, setReasonErrors] = useState({
+  const [reasonErrors] = useState({
     clearExplanations: '',
     upToDateKnowledge: ''
   });
-
-  const validateReason = (value: number, reason: string, field: 'clearExplanations' | 'upToDateKnowledge') => {
-    if (value > 0 && value < 5 && !reason.trim()) {
-      setReasonErrors(prev => ({
-        ...prev,
-        [field]: 'Vui lòng cung cấp lý do cho đánh giá dưới 5 sao'
-      }));
-      return false;
-    }
-    
-    setReasonErrors(prev => ({
-      ...prev,
-      [field]: ''
-    }));
-    return true;
-  };
 
   const handleClearExplanationsChange = (value: number) => {
     onClearExplanationsChange(value);

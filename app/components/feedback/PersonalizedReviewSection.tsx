@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Card from '../common/Card';
-import Button from '../common/Button';
+
 import TextArea from '../common/TextArea';
 import { getRandomTemplate } from '../../utils/reviewTemplates';
 
@@ -342,7 +342,7 @@ const PersonalizedReviewSection: React.FC<PersonalizedReviewSectionProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <div className="flex items-start space-x-2">
                 <span className="text-[#fc5d01] font-bold">1.</span>
-                <span><strong>Sao chép trước:</strong> Nhấn "Sao chép" để lưu nội dung vào clipboard</span>
+                <span><strong>Sao chép trước:</strong> Nhấn &quot;Sao chép&quot; để lưu nội dung vào clipboard</span>
               </div>
               <div className="flex items-start space-x-2">
                 <span className="text-[#fc5d01] font-bold">2.</span>

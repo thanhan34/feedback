@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from '../common/Button';
-import Checkbox from '../common/Checkbox';
+
+
 import Card from '../common/Card';
 import Select from '../common/Select';
 import CourseTeacherSelector from './CourseTeacherSelector';

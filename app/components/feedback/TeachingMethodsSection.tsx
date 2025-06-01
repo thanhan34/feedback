@@ -28,7 +28,7 @@ const TeachingMethodsSection: React.FC<TeachingMethodsSectionProps> = ({
 }) => {
   const [suitableForStudentsReason, setSuitableForStudentsReason] = useState('');
   const [diverseMethodsReason, setDiverseMethodsReason] = useState('');
-  const [reasonErrors, setReasonErrors] = useState({
+  const [reasonErrors] = useState({
     suitableForStudents: '',
     diverseMethods: ''
   });

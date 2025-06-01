@@ -3,7 +3,7 @@
 import React from 'react';
 import Container from '../common/Container';
 import FeedbackForm from '../feedback/FeedbackForm';
-import Image from 'next/image';
+
 
 const HomePage: React.FC = () => {
   return (

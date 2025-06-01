@@ -141,11 +141,6 @@ const QuestionManager: React.FC = () => {
     { value: 'learningOutcomes', label: 'Kết quả học tập' }
   ];
   
-  const getCategoryLabel = (category: Question['category']) => {
-    const option = categoryOptions.find(opt => opt.value === category);
-    return option ? option.label : category;
-  };
-  
   if (loading && questions.length === 0) {
     return <div className="text-center py-4">Loading...</div>;
   }

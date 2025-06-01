@@ -10,7 +10,7 @@ import {
   getFeedbacks, 
   getFeedbacksByTeacher, 
   getFeedbacksByCourse, 
-  getFeedbacksByAnonymous,
+
   getTeachers,
   getCourses
 } from '../../firebase/services';
